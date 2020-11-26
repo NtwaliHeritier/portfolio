@@ -23,6 +23,8 @@ i {
     transition: all .5s ease;
 }
 
+/*side nav*/
+
 #check {
     display: none;
 }
@@ -33,6 +35,7 @@ i {
     top: 5%;
     font-size: 40px;
     z-index: 1111;
+    cursor: pointer;
 }
 
 #btn {
@@ -40,6 +43,7 @@ i {
     left: 3%;
     top: 5%;
     font-size: 40px;
+    cursor: pointer;
     @include animation();
 }
 
@@ -90,6 +94,7 @@ i {
     }
 }
 
+/*landing page*/
 .landing {
     display: flex;
     height: 100vh;
@@ -101,9 +106,89 @@ i {
 
 img {
     height: inherit;
+    width: 50%;
 }
 
 .landing-div {
+
+    .landing-p {
+        p {
+            position: relative;
+            
+            font-family: 'Rubik', sans-serif;
+            text-transform: uppercase;
+            
+          }
+          
+          span {
+            
+            margin-left: 6px;
+            color: $color1;
+            position: absolute;
+            
+            animation: 12s steps(1,end) infinite text-rotate;
+            font-weight: 700;
+            opacity: 0;
+            
+            @for $i from 2 through 6 {
+          
+              &:nth-child(#{$i}) {
+          
+                animation-delay: 2s * ( $i - 1 );
+          
+              }
+          
+            }
+            /*
+             *
+            animation: 10s steps(1,end) infinite text-rotate;
+            font-weight: 700;
+            opacity: 0;
+            
+            @for i from 2 through 5 {
+          
+              &:nth-child(#{i}) {
+          
+                animation-delay: 2s * ( i - 1 );
+          
+              }
+          
+            }
+            */
+          }
+          
+          @keyframes text-rotate {
+            0% {
+              opacity: 1;
+            }
+            15.5% {
+              opacity: 1;
+            }
+            16.5% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 0;
+            }
+          }
+          /*
+          @keyframes text-rotate {
+            0% {
+              opacity: 1;
+            }
+            19% {
+              opacity: 1;
+            }
+            20% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 0;
+            }
+          }
+          */
+    }
+
     h4:first-child {
         color: #eda930;
     }
@@ -150,9 +235,11 @@ a {
     }
 }
 
+/*about me*/
+
 .intro {
 background-color: $color2;
-height: 70vh;
+min-height: 70vh;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -187,6 +274,8 @@ p {
     }
 }
 
+/*footer*/
+
 footer {
     background-color: $color;
     padding: 20px;
@@ -208,7 +297,7 @@ footer {
     .footer-links {
         display: flex;
         justify-content: space-around;
-        width: 18%;
+        width: 27%;
     }
 
     .footer-link {
@@ -219,5 +308,55 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 20px;
+    }
+}
+
+/*media queries*/
+
+@media screen and (max-width: 992px) {
+    .sidebar {
+        width: 40%;
+        left: -40%;
+        z-index: 1109;
+    }
+
+    #check:checked ~.landing {
+        margin-left: 0%;
+    }
+
+    .landing-div {
+        h1 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 17px;
+        }
+    }
+
+    .intro {
+        p {
+            width: 75%;
+        }
+
+        .img {
+           img {
+              width: 80%; 
+           } 
+        }
+
+        .row {
+            width: 80%;
+        }
+    }
+
+    footer {
+        p, span {
+        font-size: 18px;
+        }
+        .footer-links {
+            width: 34%;
+        }
     }
 }
