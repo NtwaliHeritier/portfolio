@@ -1,0 +1,223 @@
+$color: #0a0919;
+$color1: #eda930;
+$color2: #100f2e;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Lato', sans-serif;
+}
+
+i {
+    color: $color1;
+}
+
+@mixin animation {
+    transition: all .5s ease;
+}
+
+#check {
+    display: none;
+}
+
+#cancel {
+    position: fixed;
+    left: -10%;
+    top: 5%;
+    font-size: 40px;
+    z-index: 1111;
+}
+
+#btn {
+    position: fixed;
+    left: 3%;
+    top: 5%;
+    font-size: 40px;
+    @include animation();
+}
+
+#check:checked ~.sidebar {
+    left: 0%;
+}
+
+#check:checked ~#cancel {
+    left: 10%;
+    @include animation();
+}
+
+#check:checked ~#btn {
+    left: 20%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~.landing {
+    margin-left: 20%;
+}
+
+.sidebar {
+    position: fixed;
+    background-color: $color2;
+    width: 20%;
+    height: 100%;
+    left: -20%;
+    @include animation();
+
+    ul {
+        margin-top: 50%;
+    }
+
+    li {
+        margin-top: 20px;
+    }
+
+    a {
+        color: white;
+        font-size: 20px;
+        display: block;
+        text-align: center;
+        &:hover {
+            text-decoration: none;
+            color: $color1;
+        }
+    }
+}
+
+.landing {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: $color;
+    @include animation();
+}
+
+img {
+    height: inherit;
+}
+
+.landing-div {
+    h4:first-child {
+        color: #eda930;
+    }
+
+    h1 {
+        font-weight: 900;
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+.landing-buttons {
+    text-align: center;
+
+a {
+    margin-left: 10px;
+    border-radius: 20px;
+    padding: 12px 18px;
+    font-weight: 700;
+    border: 1px solid $color1;
+        &:hover {
+            text-decoration: none;
+        }
+
+        &:first-child {
+            background-color: $color1;
+            color: white;
+            &:hover {
+                background-color: transparent;
+                color: $color1;
+            }
+        }
+
+        &:last-child {
+            color: $color1;
+            &:hover {
+                background-color: $color1;
+            color: white;
+            }
+        }
+    }
+}
+
+.intro {
+background-color: $color2;
+height: 70vh;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 17px;
+.img {
+    margin-right: 5%;
+    width: 60%;
+    text-align: right;
+    img {
+        width: 40%;
+    }
+}
+
+h5 {
+    color: $color1;
+    font-size: 18px;
+}
+
+p {
+    width: 50%;
+}
+}
+
+.row {
+    width: 50%;
+    margin-top: 1%;
+}
+
+.intro-interests {
+    span {
+        padding: 10px;
+    }
+}
+
+footer {
+    background-color: $color;
+    padding: 20px;
+
+    p {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    span {
+        font-size: 18px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: space-around;
+        width: 18%;
+    }
+
+    .footer-link {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background-color: $color1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
