@@ -216,7 +216,8 @@ img {
 /*about me*/
 .intro {
   background-color: #100f2e;
-  min-height: 70vh;
+  min-height: 50vh;
+  padding: 40px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -313,5 +314,62 @@ footer .footer-link {
   }
   footer .footer-links {
     width: 34%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 50%;
+    left: -50%;
+    z-index: 1109;
+  }
+
+  .landing h4, .landing h1 {
+    text-align: center;
+  }
+
+  .landing img {
+    display: none;
+  }
+
+  .landing-div {
+    width: 100%;
+  }
+
+  .landing-p p {
+    text-align: center;
+    margin-left: -15%;
+  }
+
+  .img {
+    display: none;
+  }
+
+  .intro-div h5, .intro-div .intro-interests {
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+  }
+  .intro-div p {
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+  }
+  .intro-div .row {
+    width: 100%;
+    text-align: center;
+  }
+
+  footer p, footer span {
+    font-size: 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-content .footer-links {
+    margin-top: 5%;
+    width: 70%;
   }
 }
