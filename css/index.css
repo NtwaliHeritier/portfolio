@@ -267,6 +267,7 @@ footer .footer-content {
 footer .footer-links {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 27%;
 }
 footer .footer-link {
@@ -347,20 +348,26 @@ footer .footer-link {
   .intro-div h5, .intro-div .intro-interests {
     text-align: center;
     width: 100%;
-    font-size: 18px;
   }
   .intro-div p {
-    text-align: center;
-    width: 100%;
-    font-size: 18px;
+    margin: 0 auto;
+    width: 80%;
   }
   .intro-div .row {
     width: 100%;
     text-align: center;
+    margin-top: 15px;
+  }
+  .intro-div .col-md-2 {
+    display: none;
+  }
+  .intro-div .intro-contact {
+    margin-top: 2%;
+    font-size: 16px;
   }
 
   footer p, footer span {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .footer-content {
