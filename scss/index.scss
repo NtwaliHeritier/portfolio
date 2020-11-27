@@ -139,22 +139,6 @@ img {
               }
           
             }
-            /*
-             *
-            animation: 10s steps(1,end) infinite text-rotate;
-            font-weight: 700;
-            opacity: 0;
-            
-            @for i from 2 through 5 {
-          
-              &:nth-child(#{i}) {
-          
-                animation-delay: 2s * ( i - 1 );
-          
-              }
-          
-            }
-            */
           }
           
           @keyframes text-rotate {
@@ -171,22 +155,6 @@ img {
               opacity: 0;
             }
           }
-          /*
-          @keyframes text-rotate {
-            0% {
-              opacity: 1;
-            }
-            19% {
-              opacity: 1;
-            }
-            20% {
-              opacity: 0;
-            }
-            100% {
-              opacity: 0;
-            }
-          }
-          */
     }
 
     h4:first-child {
@@ -297,7 +265,7 @@ footer {
 
     .footer-links {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         width: 27%;
     }
@@ -311,6 +279,7 @@ footer {
         justify-content: center;
         align-items: center;
         padding: 20px;
+        margin: 0 10px;
     }
 }
 
@@ -402,12 +371,14 @@ footer {
         p {
             margin: 0 auto;
             width: 80%;
+            text-align: center;
         }
 
         .row {
             width: 100%;
             text-align: center;
             margin-top: 15px;
+            font-size: 14px;
         }
 
         .col-md-2 {
@@ -416,7 +387,13 @@ footer {
 
         .intro-contact {
             margin-top: 2%;
-            font-size: 16px;
+        }
+
+        .intro-interests {
+            h5 {
+                font-size: 15px;
+            }
+            font-size: 14px;
         }
     }
 
@@ -437,3 +414,60 @@ footer {
     }
 }
 
+@media screen and (max-width: 576px) {
+    .sidebar {
+        width: 100%;
+        left: -100%;
+    }
+
+    .landing {
+        height: 80vh;
+    }
+
+    .landing-div {
+        h1 {
+            font-size: 30px;
+        }
+        
+        h4 {
+                font-size: 18px;
+        }
+
+        .landing-p p {
+            font-size: 14px;
+            margin-left: -25%;
+        }
+    }
+
+    .landing-buttons {    
+        a {
+        padding: 8px 14px;
+        font-size: 14px;
+        }
+    }
+
+    .intro, .row, .intro-interests {
+        font-size: 15px;
+    }
+
+    footer {
+        padding: 20px 5px;
+        p, span {
+            font-size: 13px;
+        }
+
+        .footer-content {
+            width: 100%;
+        }
+
+        .footer-links {
+            width: 60% !important;
+        }
+
+        .footer-link {
+            width: 20px;
+            height: 20px;
+            padding: 15px;
+        }
+    }
+}
