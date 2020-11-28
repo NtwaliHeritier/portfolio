@@ -199,7 +199,7 @@ img {
 }
 .intro h5 {
   color: #eda930;
-  font-size: 18px;
+  font-size: 30px;
 }
 .intro p {
   width: 50%;
@@ -214,9 +214,78 @@ img {
   padding: 10px;
 }
 
+/*portfolio*/
+.portfolio {
+  background-color: #0a0919;
+  padding: 20px 0;
+}
+.portfolio h4 {
+  margin: 0;
+  font-size: 30px;
+  padding-top: 2%;
+  color: #eda930;
+  text-align: center;
+}
+.portfolio .portfolio-projects {
+  margin: 4% 0 2%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.portfolio .portfolio-project {
+  margin: 1% 0 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+.portfolio .portfolio-project img {
+  width: 50%;
+}
+.portfolio .portfolio-project h5 {
+  font-size: 23px;
+}
+.portfolio .project-specs {
+  margin-top: 2%;
+  width: 100%;
+}
+.portfolio .project-specs p {
+  font-size: 17px;
+  text-align: center;
+}
+.portfolio .project-specs p:first-child {
+  width: 80%;
+  margin: 2% auto;
+}
+.portfolio .project-specs p span {
+  font-size: 14px;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1%;
+  margin: 1%;
+}
+.portfolio .project-buttons {
+  margin-top: 4%;
+  text-align: center;
+}
+.portfolio .project-buttons span {
+  border-radius: 20px;
+  padding: 10px;
+  font-weight: bolder;
+  font-size: 14px;
+}
+.portfolio .project-buttons span:first-child {
+  background-color: #eda930;
+  margin-right: 2%;
+}
+.portfolio .project-buttons span:last-child {
+  border: 1px solid white;
+  color: #eda930;
+  margin-left: 2%;
+}
+
 /*footer*/
 footer {
-  background-color: #0a0919;
+  background-color: #100f2e;
   padding: 20px;
 }
 footer p {
@@ -338,6 +407,11 @@ footer .footer-link {
   }
   .intro-div .intro-interests h5 {
     font-size: 15px;
+  }
+
+  .portfolio-project {
+    width: 100% !important;
+    margin: 2% 0 10% !important;
   }
 
   footer p, footer span {
