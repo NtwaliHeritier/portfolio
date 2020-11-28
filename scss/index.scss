@@ -171,6 +171,13 @@ img {
     }
 }
 
+.landing-info {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: 0 auto;
+}
+
 .landing-buttons {
     text-align: center;
 
@@ -305,13 +312,24 @@ p {
             font-weight: bolder;
             font-size: 14px;
             &:first-child {
+                a {
+                    color: white;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
                 background-color: $color1;
                 margin-right: 2%;
             }
 
             &:last-child {
+                a {
+                    color: $color1;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
                 border: 1px solid white;
-                color: $color1;
                 margin-left: 2%;
             }
         }

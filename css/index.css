@@ -150,6 +150,13 @@ img {
   font-size: 18px;
 }
 
+.landing-info {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin: 0 auto;
+}
+
 .landing-buttons {
   text-align: center;
 }
@@ -277,10 +284,21 @@ img {
   background-color: #eda930;
   margin-right: 2%;
 }
+.portfolio .project-buttons span:first-child a {
+  color: white;
+}
+.portfolio .project-buttons span:first-child a:hover {
+  text-decoration: none;
+}
 .portfolio .project-buttons span:last-child {
   border: 1px solid white;
-  color: #eda930;
   margin-left: 2%;
+}
+.portfolio .project-buttons span:last-child a {
+  color: #eda930;
+}
+.portfolio .project-buttons span:last-child a:hover {
+  text-decoration: none;
 }
 
 /*footer*/
