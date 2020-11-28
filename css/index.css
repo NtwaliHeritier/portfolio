@@ -15,6 +15,7 @@ i {
   color: #eda930;
 }
 
+/*side nav*/
 #check {
   display: none;
 }
@@ -25,6 +26,7 @@ i {
   top: 5%;
   font-size: 40px;
   z-index: 1111;
+  cursor: pointer;
 }
 
 #btn {
@@ -32,6 +34,7 @@ i {
   left: 3%;
   top: 5%;
   font-size: 40px;
+  cursor: pointer;
   transition: all 0.5s ease;
 }
 
@@ -79,6 +82,7 @@ i {
   color: #eda930;
 }
 
+/*landing page*/
 .landing {
   display: flex;
   height: 100vh;
@@ -90,8 +94,51 @@ i {
 
 img {
   height: inherit;
+  width: 50%;
 }
 
+.landing-div .landing-p p {
+  position: relative;
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
+}
+.landing-div .landing-p span {
+  margin-left: 6px;
+  color: #eda930;
+  position: absolute;
+  animation: 12s steps(1, end) infinite text-rotate;
+  font-weight: 700;
+  opacity: 0;
+}
+.landing-div .landing-p span:nth-child(2) {
+  animation-delay: 2s;
+}
+.landing-div .landing-p span:nth-child(3) {
+  animation-delay: 4s;
+}
+.landing-div .landing-p span:nth-child(4) {
+  animation-delay: 6s;
+}
+.landing-div .landing-p span:nth-child(5) {
+  animation-delay: 8s;
+}
+.landing-div .landing-p span:nth-child(6) {
+  animation-delay: 10s;
+}
+@keyframes text-rotate {
+  0% {
+    opacity: 1;
+  }
+  15.5% {
+    opacity: 1;
+  }
+  16.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .landing-div h4:first-child {
   color: #eda930;
 }
@@ -101,6 +148,13 @@ img {
 }
 .landing-div p {
   font-size: 18px;
+}
+
+.landing-info {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .landing-buttons {
@@ -132,9 +186,11 @@ img {
   color: white;
 }
 
+/*about me*/
 .intro {
   background-color: #100f2e;
-  height: 70vh;
+  min-height: 50vh;
+  padding: 40px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,7 +206,7 @@ img {
 }
 .intro h5 {
   color: #eda930;
-  font-size: 18px;
+  font-size: 30px;
 }
 .intro p {
   width: 50%;
@@ -165,8 +221,89 @@ img {
   padding: 10px;
 }
 
-footer {
+/*portfolio*/
+.portfolio {
   background-color: #0a0919;
+  padding: 20px 0;
+}
+.portfolio h4 {
+  margin: 0;
+  font-size: 30px;
+  padding-top: 2%;
+  color: #eda930;
+  text-align: center;
+}
+.portfolio .portfolio-projects {
+  margin: 4% 0 2%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.portfolio .portfolio-project {
+  margin: 1% 0 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+.portfolio .portfolio-project img {
+  width: 50%;
+}
+.portfolio .portfolio-project h5 {
+  font-size: 23px;
+}
+.portfolio .project-specs {
+  margin-top: 2%;
+  width: 100%;
+}
+.portfolio .project-specs p {
+  font-size: 17px;
+  text-align: center;
+}
+.portfolio .project-specs p:first-child {
+  width: 80%;
+  margin: 2% auto;
+}
+.portfolio .project-specs p span {
+  font-size: 14px;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1%;
+  margin: 1%;
+}
+.portfolio .project-buttons {
+  margin-top: 4%;
+  text-align: center;
+}
+.portfolio .project-buttons span {
+  border-radius: 20px;
+  padding: 10px;
+  font-weight: bolder;
+  font-size: 14px;
+}
+.portfolio .project-buttons span:first-child {
+  background-color: #eda930;
+  margin-right: 2%;
+}
+.portfolio .project-buttons span:first-child a {
+  color: white;
+}
+.portfolio .project-buttons span:first-child a:hover {
+  text-decoration: none;
+}
+.portfolio .project-buttons span:last-child {
+  border: 1px solid white;
+  margin-left: 2%;
+}
+.portfolio .project-buttons span:last-child a {
+  color: #eda930;
+}
+.portfolio .project-buttons span:last-child a:hover {
+  text-decoration: none;
+}
+
+/*footer*/
+footer {
+  background-color: #100f2e;
   padding: 20px;
 }
 footer p {
@@ -182,8 +319,9 @@ footer .footer-content {
 }
 footer .footer-links {
   display: flex;
-  justify-content: space-around;
-  width: 18%;
+  justify-content: center;
+  align-items: center;
+  width: 27%;
 }
 footer .footer-link {
   height: 30px;
@@ -193,4 +331,166 @@ footer .footer-link {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+  margin: 0 10px;
+}
+
+/*media queries*/
+@media screen and (max-width: 992px) {
+  .sidebar {
+    width: 40%;
+    left: -40%;
+    z-index: 1109;
+  }
+
+  #check:checked ~ .landing {
+    margin-left: 0%;
+  }
+
+  .landing-div h1 {
+    font-size: 40px;
+  }
+  .landing-div p {
+    font-size: 17px;
+  }
+
+  .intro p {
+    width: 75%;
+  }
+  .intro .img img {
+    width: 80%;
+  }
+  .intro .row {
+    width: 80%;
+  }
+
+  footer p, footer span {
+    font-size: 18px;
+  }
+  footer .footer-links {
+    width: 34%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 50%;
+    left: -50%;
+    z-index: 1109;
+  }
+
+  .landing h4, .landing h1 {
+    text-align: center;
+  }
+
+  .landing img {
+    display: none;
+  }
+
+  .landing-div {
+    width: 100%;
+  }
+
+  .landing-p p {
+    text-align: center;
+    margin-left: -15%;
+  }
+
+  .img {
+    display: none;
+  }
+
+  .intro-div h5, .intro-div .intro-interests {
+    text-align: center;
+    width: 100%;
+  }
+  .intro-div p {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+  }
+  .intro-div .row {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  .intro-div .col-md-2 {
+    display: none;
+  }
+  .intro-div .intro-contact {
+    margin-top: 2%;
+  }
+  .intro-div .intro-interests {
+    font-size: 14px;
+  }
+  .intro-div .intro-interests h5 {
+    font-size: 15px;
+  }
+
+  .portfolio-project {
+    width: 100% !important;
+    margin: 2% 0 10% !important;
+  }
+
+  footer p, footer span {
+    font-size: 16px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-content .footer-links {
+    margin-top: 5%;
+    width: 70%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .sidebar {
+    width: 100%;
+    left: -100%;
+  }
+
+  .landing {
+    height: 80vh;
+  }
+
+  .landing-div h1 {
+    font-size: 30px;
+  }
+  .landing-div h4 {
+    font-size: 18px;
+  }
+  .landing-div .landing-p p {
+    font-size: 14px;
+    margin-left: -25%;
+  }
+
+  .landing-buttons a {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .intro, .row, .intro-interests {
+    font-size: 15px;
+  }
+
+  footer {
+    padding: 20px 5px;
+  }
+  footer p, footer span {
+    font-size: 13px;
+  }
+  footer .footer-content {
+    width: 100%;
+  }
+  footer .footer-links {
+    width: 60% !important;
+  }
+  footer .footer-link {
+    width: 20px;
+    height: 20px;
+    padding: 15px;
+  }
 }

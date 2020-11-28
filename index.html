@@ -20,20 +20,26 @@
     <label for="check" id="cancel"><i class="fas fa-times text-white"></i></label>
     <div class="sidebar">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
+            <li><a href="#landing-page">Home</a></li>
+            <li><a href="#introduction">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#footer">Contact Me</a></li>
         </ul>
     </div>
 
-    <section class="landing">
+    <section class="landing" id="landing-page">
         <div class="landing-div">
             <h4>Hi, I am</h4>
             <h1>NTWALI Heritier</h1>
             <h4>Full Stack Developer</h4>
+            <div class="landing-p mt-3">
+                <p>Proeficient in <span>Ruby & Rails</span> <span>Elixir & Phoenix</span> <span>React & Redux</span> <span>JavaScript</span> <span>HTML & CSS</span> <span>SASS & Bootstrap</span></p>
+            </div>
+            <div class="landing-info text-center">
+                <a href="https://www.linkedin.com/in/ntwaliheritier/" target="_blank"><i class="fab fa-linkedin-in fa-2x text-white"></i></a>
+                <a href="https://github.com/NtwaliHeritier" target="_blank"><i class="fab fa-github fa-2x text-white"></i></a>
+                <a href="https://twitter.com/NtwaliHeritier" target="_blank"><i class="fab fa-twitter fa-2x text-white"></i></a>
+            </div>
             <div class="landing-buttons mt-5">
                 <a href="https://docs.google.com/document/d/1Eh619UZtoAlb4VLlWfPtb0l2AEs3Hjz38fcDHgE13H0/edit?usp=sharing">Download CV</a>
                 <a href="#">Contact Me</a>
@@ -42,49 +48,102 @@
         <img src="./images/hatsor.png" alt="">
     </section>
 
-    <section class="intro">
+    <section class="intro" id="introduction">
         <div class="img">
-            <img src="./images/hatsor-intro.jpg" alt="">
+            <img src="./images/hat.jpg" alt="">
         </div>
         <div class="intro-div">
             <h5 class="font-weight-bold">About Me</h5>
             <p>I am a tech enthusiast with a passion to make the world a better place by automating tasks that would otherwise take forever to achieve.</p>
             <div class="intro-contact">
                     <div class="row">
-                        <div class="col-lg-4"><i class="far fa-user"></i> Name</div>
-                        <div class="col-lg-2">:</div>
-                        <div class="col-lg-6">NTWALI Heritier</div>
+                        <div class="col-lg-4 col-md-6"><i class="far fa-user"></i> Name</div>
+                        <div class="col-lg-2 col-md-2">:</div>
+                        <div class="col-lg-6 col-md-6">NTWALI Heritier</div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-4"><i class="fas fa-phone-alt"></i> Phone</div>
-                        <div class="col-lg-2">:</div>
-                        <div class="col-lg-6">(+250) 780-280-978</div>
+                        <div class="col-lg-4 col-md-6"><i class="fas fa-phone-alt"></i> Phone</div>
+                        <div class="col-lg-2 col-md-2">:</div>
+                        <div class="col-lg-6 col-md-6">(+250) 780-280-978</div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-4"><i class="far fa-envelope"></i> Email</div>
-                        <div class="col-lg-2">:</div>
-                        <div class="col-lg-6">ntwalihatsor78.nh@gmail.com</div>
+                        <div class="col-lg-4 col-md-6"><i class="far fa-envelope"></i> Email</div>
+                        <div class="col-lg-2 col-md-2">:</div>
+                        <div class="col-lg-6 col-md-6">ntwalihatsor78.nh@gmail.com</div>
                     </div>
             </div>
             <div class="intro-interests mt-4">
                 <h5>My Interests</h5>
-                <span><i class="fas fa-route"></i></i> Travelling</span>
+                <span><i class="fas fa-route"></i>Travelling</span>
                 <span><i class="fas fa-music"></i> Music</span>
-                <span><i class="fas fa-film"></i></i> Movie</span>
+                <span><i class="fas fa-film"></i> Movie</span>
             </div>
         </div>
     </section>
 
-    <footer>
+    <section class="portfolio" id="projects">
+        <h4 class="font-weight-bold">Projects</h4>
+        <div class="portfolio-projects">
+            <div class="portfolio-project">
+                <h5 class="font-weight-bold">INFOX</h5>
+                <img src="./images/portfolio/infox.jpg" alt="">
+                <div class="project-specs">
+                    <p>Responsive blog application where users post articles and vote each other's posts.</p>
+                    <p><span>Ruby on Rails</span><span>Ruby</span><span>Bootstrap</span><span>SASS</span><span>PostgreSQL</span></p>
+                    <div class="project-buttons">
+                        <span class="project-live"><a href="https://shrouded-basin-98979.herokuapp.com/" target="_blank">Live demo <i class="fas fa-external-link-alt text-white"></i></a></span>
+                        <span class="project-code"><a href="https://github.com/NtwaliHeritier/lifestyle-app" target="_blank">Source code <i class="fab fa-github"></i></a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-project">
+                <h5 class="font-weight-bold">Social media</h5>
+                <img src="./images/portfolio/social-media.jpg" alt="">
+                <div class="project-specs">
+                    <p>Responsive social media where users follow each other, post and comment on each other's posts.</p>
+                    <p><span>Ruby on Rails</span><span>Ruby</span><span>Bootstrap</span><span>SASS</span><span>PostgreSQL</span></p>
+                    <div class="project-buttons">
+                        <span class="project-live"><a href="https://protected-caverns-58695.herokuapp.com/users/sign_in/" target="_blank">Live demo <i class="fas fa-external-link-alt text-white"></i></a></span>
+                        <span class="project-code"><a href="https://github.com/NtwaliHeritier/ror-social-scaffold" target="_blank">Source code <i class="fab fa-github"></i></a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-project">
+                <h5 class="font-weight-bold">Kodesha</h5>
+                <img src="./images/portfolio/kodesha.jpg" alt="">
+                <div class="project-specs">
+                    <p>Responsive house rent template.</p>
+                    <p><span>HTML</span><span>Bootstrap</span><span>SASS</span></p>
+                    <div class="project-buttons">
+                        <span class="project-live"><a href="https://html-capstone.netlify.app/" target="_blank">Live demo <i class="fas fa-external-link-alt text-white"></i></a></span>
+                        <span class="project-code"><a href="https://github.com/NtwaliHeritier/Kodesha" target="_blank">Source code <i class="fab fa-github"></i></a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-project">
+                <h5 class="font-weight-bold">News Week</h5>
+                <img src="./images/portfolio/news.jpg" alt="">
+                <div class="project-specs">
+                    <p>Responsive news week clone.</p>
+                    <p><span>HTML</span><span>Bootstrap</span><span>CSS</span></p>
+                    <div class="project-buttons">
+                        <span class="project-live"><a href="https://newsweekclone-app.netlify.app/" target="_blank">Live demo <i class="fas fa-external-link-alt text-white"></i></a></span>
+                        <span class="project-code"><a href="https://github.com/NtwaliHeritier/Using-Bootstrap_Newsweekclone" target="_blank">Source code <i class="fab fa-github"></i></a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
         <div class="footer-content">
             <p>Copyright 2020. All rights reserved</p>
             <div class="footer-links">
-                <span>Connect with me: </span>
                 <div class="footer-link">
-                    <a href="https://github.com/NtwaliHeritier" target="_blank"><i class="fab fa-github text-white"></i></i></i></a>
+                    <a href="https://github.com/NtwaliHeritier" target="_blank"><i class="fab fa-github text-white"></i></a>
                 </div>
                 <div class="footer-link">
-                    <a href="https://www.linkedin.com/in/ntwaliheritier/" target="_blank"><i class="fab fa-linkedin-in text-white"></i></i></a>
+                    <a href="https://www.linkedin.com/in/ntwaliheritier/" target="_blank"><i class="fab fa-linkedin-in text-white"></i></a>
                 </div>
                 <div class="footer-link">
                     <a href="https://twitter.com/NtwaliHeritier" target="_blank"><i class="fab fa-twitter text-white"></i></a>

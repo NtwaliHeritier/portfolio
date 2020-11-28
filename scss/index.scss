@@ -23,6 +23,8 @@ i {
     transition: all .5s ease;
 }
 
+/*side nav*/
+
 #check {
     display: none;
 }
@@ -33,6 +35,7 @@ i {
     top: 5%;
     font-size: 40px;
     z-index: 1111;
+    cursor: pointer;
 }
 
 #btn {
@@ -40,6 +43,7 @@ i {
     left: 3%;
     top: 5%;
     font-size: 40px;
+    cursor: pointer;
     @include animation();
 }
 
@@ -90,6 +94,7 @@ i {
     }
 }
 
+/*landing page*/
 .landing {
     display: flex;
     height: 100vh;
@@ -101,9 +106,57 @@ i {
 
 img {
     height: inherit;
+    width: 50%;
 }
 
 .landing-div {
+
+    .landing-p {
+        p {
+            position: relative;
+            
+            font-family: 'Rubik', sans-serif;
+            text-transform: uppercase;
+            
+          }
+          
+          span {
+            
+            margin-left: 6px;
+            color: $color1;
+            position: absolute;
+            
+            animation: 12s steps(1,end) infinite text-rotate;
+            font-weight: 700;
+            opacity: 0;
+            
+            @for $i from 2 through 6 {
+          
+              &:nth-child(#{$i}) {
+          
+                animation-delay: 2s * ( $i - 1 );
+          
+              }
+          
+            }
+          }
+          
+          @keyframes text-rotate {
+            0% {
+              opacity: 1;
+            }
+            15.5% {
+              opacity: 1;
+            }
+            16.5% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 0;
+            }
+          }
+    }
+
     h4:first-child {
         color: #eda930;
     }
@@ -116,6 +169,13 @@ img {
     p {
         font-size: 18px;
     }
+}
+
+.landing-info {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .landing-buttons {
@@ -150,9 +210,12 @@ a {
     }
 }
 
+/*about me*/
+
 .intro {
 background-color: $color2;
-height: 70vh;
+min-height: 50vh;
+padding: 40px 0;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -168,7 +231,7 @@ font-size: 17px;
 
 h5 {
     color: $color1;
-    font-size: 18px;
+    font-size: 30px;
 }
 
 p {
@@ -187,8 +250,96 @@ p {
     }
 }
 
-footer {
+/*portfolio*/
+
+.portfolio {
     background-color: $color;
+    padding: 20px 0;
+    h4 {
+        margin: 0;
+        font-size: 30px;
+        padding-top: 2%;
+        color: $color1;
+        text-align: center;
+    }
+    .portfolio-projects {
+        margin: 4% 0 2%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .portfolio-project {
+        margin: 1% 0 3%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        img {
+            width: 50%;
+        }
+        h5 {
+            font-size: 23px;
+        }
+    }
+
+    .project-specs {
+        margin-top: 2%;
+        width: 100%;
+        p {
+            &:first-child {
+                width: 80%;
+                margin: 2% auto;
+            }
+
+            font-size: 17px;
+            text-align: center;
+            span {
+                font-size: 14px;
+                border: 1px solid white;
+                border-radius: 10px;
+                padding: 1%;
+                margin: 1%;
+            }
+        }
+    }
+
+    .project-buttons {
+        margin-top: 4%;
+        text-align: center;
+        span {
+            border-radius: 20px;
+            padding: 10px;
+            font-weight: bolder;
+            font-size: 14px;
+            &:first-child {
+                a {
+                    color: white;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+                background-color: $color1;
+                margin-right: 2%;
+            }
+
+            &:last-child {
+                a {
+                    color: $color1;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+                border: 1px solid white;
+                margin-left: 2%;
+            }
+        }
+    }
+}
+
+/*footer*/
+
+footer {
+    background-color: $color2;
     padding: 20px;
 
     p {
@@ -207,8 +358,9 @@ footer {
 
     .footer-links {
         display: flex;
-        justify-content: space-around;
-        width: 18%;
+        justify-content: center;
+        align-items: center;
+        width: 27%;
     }
 
     .footer-link {
@@ -219,5 +371,201 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 20px;
+        margin: 0 10px;
+    }
+}
+
+/*media queries*/
+
+@media screen and (max-width: 992px) {
+    .sidebar {
+        width: 40%;
+        left: -40%;
+        z-index: 1109;
+    }
+
+    #check:checked ~.landing {
+        margin-left: 0%;
+    }
+
+    .landing-div {
+        h1 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 17px;
+        }
+    }
+
+    .intro {
+        p {
+            width: 75%;
+        }
+
+        .img {
+           img {
+              width: 80%; 
+           } 
+        }
+
+        .row {
+            width: 80%;
+        }
+    }
+
+    footer {
+        p, span {
+        font-size: 18px;
+        }
+        .footer-links {
+            width: 34%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 50%;
+        left: -50%;
+        z-index: 1109;
+    }
+
+    .landing {
+        h4, h1 {
+            text-align: center;
+        }
+    }
+
+    .landing img {
+        display: none;
+    }
+
+    .landing-div {
+        width: 100%;
+    }
+
+    .landing-p p {
+        text-align: center;
+        margin-left: -15%;
+    }
+
+    .img {
+        display: none;
+    }
+
+    .intro-div {
+        h5, .intro-interests {
+            text-align: center;
+            width: 100%;
+        }
+
+        p {
+            margin: 0 auto;
+            width: 80%;
+            text-align: center;
+        }
+
+        .row {
+            width: 100%;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .col-md-2 {
+            display: none;
+        }
+
+        .intro-contact {
+            margin-top: 2%;
+        }
+
+        .intro-interests {
+            h5 {
+                font-size: 15px;
+            }
+            font-size: 14px;
+        }
+    }
+
+    .portfolio-project {
+        width: 100% !important;
+        margin:2% 0 10% !important;
+    }
+
+    footer {
+        p, span {
+            font-size: 16px;
+        }
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        .footer-links {
+            margin-top: 5%;
+            width: 70%;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .sidebar {
+        width: 100%;
+        left: -100%;
+    }
+
+    .landing {
+        height: 80vh;
+    }
+
+    .landing-div {
+        h1 {
+            font-size: 30px;
+        }
+        
+        h4 {
+                font-size: 18px;
+        }
+
+        .landing-p p {
+            font-size: 14px;
+            margin-left: -25%;
+        }
+    }
+
+    .landing-buttons {    
+        a {
+        padding: 8px 14px;
+        font-size: 14px;
+        }
+    }
+
+    .intro, .row, .intro-interests {
+        font-size: 15px;
+    }
+
+    footer {
+        padding: 20px 5px;
+        p, span {
+            font-size: 13px;
+        }
+
+        .footer-content {
+            width: 100%;
+        }
+
+        .footer-links {
+            width: 60% !important;
+        }
+
+        .footer-link {
+            width: 20px;
+            height: 20px;
+            padding: 15px;
+        }
     }
 }
