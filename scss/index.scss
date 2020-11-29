@@ -42,7 +42,7 @@ i {
     position: fixed;
     left: 3%;
     top: 5%;
-    font-size: 40px;
+    font-size: 35px;
     cursor: pointer;
     @include animation();
 }
@@ -426,6 +426,10 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+    #btn {
+        font-size: 25px;
+    }
+
     .sidebar {
         width: 50%;
         left: -50%;

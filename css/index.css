@@ -33,7 +33,7 @@ i {
   position: fixed;
   left: 3%;
   top: 5%;
-  font-size: 40px;
+  font-size: 35px;
   cursor: pointer;
   transition: all 0.5s ease;
 }
@@ -372,6 +372,10 @@ footer .footer-link {
   }
 }
 @media screen and (max-width: 768px) {
+  #btn {
+    font-size: 25px;
+  }
+
   .sidebar {
     width: 50%;
     left: -50%;
