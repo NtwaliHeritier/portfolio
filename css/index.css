@@ -193,6 +193,9 @@ i {
 .about-me .d-flex {
   justify-content: space-around;
 }
+.about-me .skills {
+  padding: 10px;
+}
 .about-me .skillset {
   margin-top: 10px;
 }
@@ -426,10 +429,14 @@ footer span {
     font-size: 14px;
   }
 
-  .intro,
-.row,
-.intro-interests {
-    font-size: 15px;
+  .about-me .skills {
+    padding: 0px;
+  }
+  .about-me .d-flex {
+    flex-direction: column;
+  }
+  .about-me .d-flex .text-center {
+    margin-top: 20px;
   }
 
   footer {
