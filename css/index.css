@@ -85,16 +85,11 @@ i {
 /*landing page*/
 .landing {
   display: flex;
-  height: 100vh;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
   background-color: #0a0919;
   transition: all 0.5s ease;
-}
-
-img {
-  height: inherit;
-  width: 50%;
 }
 
 .landing-div .landing-p p {
@@ -187,38 +182,28 @@ img {
 }
 
 /*about me*/
-.intro {
+.about-me {
   background-color: #100f2e;
-  min-height: 50vh;
-  padding: 40px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+.about-me h3,
+.about-me h4,
+.about-me h5 {
+  color: #eda930;
+}
+.about-me .d-flex {
+  justify-content: space-around;
+}
+.about-me .skillset {
+  margin-top: 10px;
+}
+.about-me .skillset span {
   font-size: 17px;
 }
-.intro .img {
-  margin-right: 5%;
-  width: 60%;
-  text-align: right;
-}
-.intro .img img {
-  width: 40%;
-}
-.intro h5 {
-  color: #eda930;
-  font-size: 30px;
-}
-.intro p {
-  width: 50%;
-}
 
-.row {
-  width: 50%;
-  margin-top: 1%;
-}
-
-.intro-interests span {
-  padding: 10px;
+.about-me-spec {
+  width: 80%;
+  margin: auto;
+  font-size: 18px;
 }
 
 /*portfolio*/
@@ -256,7 +241,7 @@ img {
   width: 100%;
 }
 .portfolio .project-specs p {
-  font-size: 17px;
+  font-size: 18px;
   text-align: center;
 }
 .portfolio .project-specs p:first-child {
@@ -354,17 +339,8 @@ footer .footer-link {
     font-size: 17px;
   }
 
-  .intro p {
-    width: 75%;
-  }
-  .intro .img img {
-    width: 80%;
-  }
-  .intro .row {
-    width: 80%;
-  }
-
-  footer p, footer span {
+  footer p,
+footer span {
     font-size: 18px;
   }
   footer .footer-links {
@@ -382,7 +358,8 @@ footer .footer-link {
     z-index: 1109;
   }
 
-  .landing h4, .landing h1 {
+  .landing h4,
+.landing h1 {
     text-align: center;
   }
 
@@ -403,40 +380,13 @@ footer .footer-link {
     display: none;
   }
 
-  .intro-div h5, .intro-div .intro-interests {
-    text-align: center;
-    width: 100%;
-  }
-  .intro-div p {
-    margin: 0 auto;
-    width: 80%;
-    text-align: center;
-  }
-  .intro-div .row {
-    width: 100%;
-    text-align: center;
-    margin-top: 15px;
-    font-size: 14px;
-  }
-  .intro-div .col-md-2 {
-    display: none;
-  }
-  .intro-div .intro-contact {
-    margin-top: 2%;
-  }
-  .intro-div .intro-interests {
-    font-size: 14px;
-  }
-  .intro-div .intro-interests h5 {
-    font-size: 15px;
-  }
-
   .portfolio-project {
     width: 100% !important;
     margin: 2% 0 10% !important;
   }
 
-  footer p, footer span {
+  footer p,
+footer span {
     font-size: 16px;
   }
 
@@ -457,7 +407,7 @@ footer .footer-link {
   }
 
   .landing {
-    height: 80vh;
+    height: 100vh;
   }
 
   .landing-div h1 {
@@ -476,14 +426,17 @@ footer .footer-link {
     font-size: 14px;
   }
 
-  .intro, .row, .intro-interests {
+  .intro,
+.row,
+.intro-interests {
     font-size: 15px;
   }
 
   footer {
     padding: 20px 5px;
   }
-  footer p, footer span {
+  footer p,
+footer span {
     font-size: 13px;
   }
   footer .footer-content {
