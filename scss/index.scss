@@ -208,11 +208,17 @@ i {
 		color: $color1;
 	}
 	.d-flex {
-		justify-content: space-around;
+		justify-content: space-evenly;
 	}
 
 	.skills {
 		padding: 10px;
+	}
+
+	.skillset-container {
+		background-color: transparent;
+		box-shadow: 0px 2px 20px 5px $color;
+		padding: 30px 60px !important;
 	}
 
 	.skillset {
@@ -447,6 +453,15 @@ footer {
 	}
 }
 
+@media screen and (max-width: 649px) {
+	.d-flex {
+		flex-direction: column;
+		.skillset-container {
+			margin-top: 20px;
+		}
+	}
+}
+
 @media screen and (max-width: 576px) {
 	.sidebar {
 		width: 100%;
@@ -482,12 +497,6 @@ footer {
 	.about-me {
 		.skills {
 			padding: 0px;
-		}
-		.d-flex {
-			flex-direction: column;
-			.text-center {
-				margin-top: 20px;
-			}
 		}
 	}
 
